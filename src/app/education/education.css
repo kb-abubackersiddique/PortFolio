@@ -1,0 +1,62 @@
+/* ====== EDUCATION SECTION STYLE ====== */
+
+.container {
+  max-width: 800px;
+}
+
+/* Section Title */
+h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #0d6efd; /* Bootstrap primary blue */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Education List */
+.list-group {
+  border: none;
+  background: transparent;
+}
+
+/* Each Education Card */
+.list-group-item {
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.list-group-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 18px rgba(13, 110, 253, 0.3);
+}
+
+/* Text Styling */
+strong {
+  font-size: 1.1rem;
+  color: #0d6efd;
+}
+
+.list-group-item br + span,
+.list-group-item {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .list-group-item {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  strong {
+    font-size: 1rem;
+  }
+}
