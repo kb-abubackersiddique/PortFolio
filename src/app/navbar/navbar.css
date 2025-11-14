@@ -1,51 +1,47 @@
-/* ====== NAVBAR STYLE ====== */
-
-/* Navbar base style */
-.navbar {
-  background-color: #0d1117 !important; /* Deep dark background */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  padding: 10px 0;
-  transition: all 0.3s ease;
+/* Default navbar transparent */
+.custom-nav {
+  background: transparent;
+  padding: 12px 0;
+  transition: all 0.4s ease;
 }
 
-/* Brand name */
+/* Navbar after scrolling */
+.custom-nav.scrolled {
+  background-color: #0d1117 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Brand */
 .navbar-brand {
-  font-weight: 700;
-  font-size: 1.3rem;
   color: #0d6efd !important;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
   transition: color 0.3s ease;
 }
 
 .navbar-brand:hover {
-  color: #5da9ff !important;
+  color: #58a5ff !important;
 }
 
 /* Navbar links */
 .nav-link {
-  color: #f8f9fa !important;
-  font-weight: 500;
+  color: white !important;
   margin-left: 15px;
+  font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
 }
 
-/* Hover and active link underline */
-.nav-link:hover,
-.nav-link.active {
-  color: #0d6efd !important;
-}
-
+/* Hover underline animation */
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
+  width: 0;
   height: 2px;
-  background-color: #0d6efd;
-  transition: width 0.3s ease;
+  background: #0d6efd;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
 }
 
 .nav-link:hover::after,
@@ -53,31 +49,15 @@
   width: 100%;
 }
 
-/* Toggle button (mobile view) */
-.navbar-toggler {
-  border: none;
-  outline: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-/* Navbar icon color */
-.navbar-toggler-icon {
-  filter: invert(100%);
-}
-
-/* Collapsible menu styling for mobile */
+/* Mobile menu */
 @media (max-width: 991px) {
   .navbar-collapse {
-    background-color: #0d1117;
-    border-radius: 10px;
+    background: #0d1117;
     padding: 15px;
+    border-radius: 10px;
   }
 
   .nav-link {
-    display: block;
     margin: 10px 0;
   }
 }

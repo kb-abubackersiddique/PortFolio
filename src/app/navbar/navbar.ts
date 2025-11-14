@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Skills } from '../skills/skills';
 
@@ -9,5 +9,13 @@ import { Skills } from '../skills/skills';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-
+ @HostListener("window:scroll", [])
+  onScroll() {
+    const nav = document.getElementById("mainNav");
+    if (window.scrollY > 20) {
+      nav?.classList.add("scrolled");
+    } else {
+      nav?.classList.remove("scrolled");
+    }
+  }
 }

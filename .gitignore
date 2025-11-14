@@ -1,43 +1,63 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# ================================
+# Angular + Node.js .gitignore
+# Production Ready for GitHub
+# ================================
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
+# ---- Angular Build Outputs ----
+dist/
+tmp/
+out-tsc/
+bazel-out/
 
-# Node
-/node_modules
+# ---- Node ----
+node_modules/
 npm-debug.log
 yarn-error.log
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+# ---- Environment Files ----
+# (If you want to hide API keys, uncomment these)
+# src/environments/environment.ts
+# src/environments/environment.prod.ts
 
-# Visual Studio Code
+# ---- Logs ----
+*.log
+logs/
+debug.log
+error.log
+
+# ---- IDE / Editor Settings ----
+.idea/
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
+*.sublime-workspace
+*.sublime-project
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-__screenshots__/
-
-# System files
+# ---- OS Generated Files ----
 .DS_Store
 Thumbs.db
+
+# ---- Angular Cache ----
+.angular/cache/
+
+# ---- Test / Coverage Output ----
+coverage/
+__tests__/
+__screenshots__/
+testem.log
+
+# ---- Sass / Styling Cache ----
+.sass-cache/
+
+# ---- Others ----
+connect.lock
+typings/
+libpeerconnection.log
+
+# ---- Temporary Files ----
+*.tmp
+*.swp
+*.swm
+*.temp
